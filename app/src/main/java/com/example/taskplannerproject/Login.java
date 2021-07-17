@@ -5,17 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.FirebaseFirestore;
+
 
 import java.util.regex.Pattern;
 
@@ -24,8 +20,6 @@ import static android.content.ContentValues.TAG;
 public class Login extends AppCompatActivity {
     
     private EditText email, password;
-    private Button Submission;
-    private TextView forgot, signIn;
     private FirebaseAuth mAuth;
 
 
@@ -39,16 +33,17 @@ public class Login extends AppCompatActivity {
         
         email = findViewById(R.id.login_email);
         password = findViewById(R.id.login_password);
-        
-        Submission = findViewById(R.id.login_submission);
-        forgot = findViewById(R.id.login_forgotPassword);
-        signIn = findViewById(R.id.login_switchToRegister);
+
+        Button submission = (findViewById(R.id.login_submission));
+        TextView forgot = findViewById(R.id.login_forgotPassword);
+        TextView signIn = findViewById(R.id.login_switchToRegister);
         mAuth = FirebaseAuth.getInstance();
 
-        signIn.setOnClickListener(v->{
-            startActivity(new Intent(this, Register.class));
+        forgot.setOnClickListener(v->{
+            //change to forgot page
         });
-        Submission.setOnClickListener(v -> {
+        signIn.setOnClickListener(v-> startActivity(new Intent(this, Register.class)));
+        submission.setOnClickListener(v -> {
           if (email.getText().toString().isEmpty() || password.getText().toString().isEmpty()){
               Toast.makeText(this, "One of the fields is empty, please check", Toast.LENGTH_SHORT).show();
           }
@@ -61,7 +56,7 @@ public class Login extends AppCompatActivity {
                           if (task.isSuccessful()) {
                               // Sign in success, update UI with the signed-in user's information
                               Log.d(TAG, "signInWithEmail:success");
-                              FirebaseUser user = mAuth.getCurrentUser();
+                              //FirebaseUser user = mAuth.getCurrentUser();
                               startActivity(new Intent(Login.this, HomeScreen.class));
                               Toast.makeText(this, "Login successfull", Toast.LENGTH_SHORT).show();
                               finish();
