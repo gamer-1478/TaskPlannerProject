@@ -22,6 +22,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Objects;
 import java.util.regex.Pattern;
 
 import static android.content.ContentValues.TAG;
@@ -55,7 +56,7 @@ public class Register extends AppCompatActivity {
                         user.put("time_created", new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date()));
 
                         // Add a new document with a generated ID
-                        db.collection("users").document(f_user.getUid())
+                        db.collection("users").document(Objects.requireNonNull(f_user).getUid())
                                 .set(user)
                                 .addOnSuccessListener(aVoid -> {
                                     Log.d(TAG, "DocumentSnapshot successfully written!");
