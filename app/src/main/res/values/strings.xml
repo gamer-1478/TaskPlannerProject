@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">TaskPlannerProject</string>
     <string name="from">from</string>
-    <string name="infinity">INFINITY</string>
+    <string name="infinity">SMART PLANNER</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="forget_password">Forget Password?</string>
     <string name="login">Login</string>
     <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
     <string name="signup">SIGNUP</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="sign_up">Sign Up</string>
     <string name="do_you_have_an_account_sign_in">Do you have an account? Sign In</string>
+    <string name="name">Name</string>
+    <string name="welcome_to_smart_planner">WELCOME TO SMART PLANNER</string>
 </resources>

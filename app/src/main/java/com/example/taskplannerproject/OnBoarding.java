@@ -16,7 +16,7 @@ public class OnBoarding extends AppCompatActivity {
         new Handler().post(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(OnBoarding.this, Login.class));
+                startActivity(new Intent(OnBoarding.this, LoginSignup.class));
                 finish();
             }
         });
