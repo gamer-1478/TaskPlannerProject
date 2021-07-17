@@ -58,7 +58,7 @@ public class Login extends AppCompatActivity {
                               Log.d(TAG, "signInWithEmail:success");
                               //FirebaseUser user = mAuth.getCurrentUser();
                               startActivity(new Intent(Login.this, HomeScreen.class));
-                              Toast.makeText(this, "Login successfull", Toast.LENGTH_SHORT).show();
+                              Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
                               finish();
                           } else {
                               // If sign in fails, display a message to the user.
