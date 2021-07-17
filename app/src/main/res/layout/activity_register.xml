@@ -69,7 +69,7 @@
                             android:background="@drawable/sign"
                             android:paddingStart="20dp"
                             android:paddingEnd="20dp"
-                            android:text="@string/name" />
+                            android:hint="@string/name" />
 
                         <EditText
                             android:id="@+id/register_email"
@@ -80,7 +80,7 @@
                             android:background="@drawable/sign"
                             android:paddingStart="20dp"
                             android:paddingEnd="20dp"
-                            android:text="@string/email" />
+                            android:hint="@string/email" />
 
                         <EditText
                             android:id="@+id/register_password"
@@ -91,7 +91,7 @@
                             android:background="@drawable/sign"
                             android:paddingStart="20dp"
                             android:paddingEnd="20dp"
-                            android:text="@string/password" />
+                            android:hint="@string/password" />
 
                         <EditText
                             android:id="@+id/register_confirmPassword"
@@ -102,7 +102,7 @@
                             android:background="@drawable/sign"
                             android:paddingStart="20dp"
                             android:paddingEnd="20dp"
-                            android:text="@string/confirm_password" />
+                            android:hint="@string/confirm_password" />
 
                         <Button
                             android:id="@+id/register_submission"
@@ -133,8 +133,6 @@
                     android:layout_centerInParent="true"
                     android:visibility="gone"/>
             </RelativeLayout>
-
-
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

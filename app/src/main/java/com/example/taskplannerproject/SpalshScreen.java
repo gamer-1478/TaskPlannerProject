@@ -21,6 +21,6 @@ public class SpalshScreen extends AppCompatActivity {
                 startActivity(new Intent(SpalshScreen.this, OnBoarding.class));
                 finish();
             }
-        }, 5000);
+        }, 2000);
     }
 }

@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -54,7 +55,7 @@ public class Register extends AppCompatActivity {
                         user.put("time_created", new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date()));
 
                         // Add a new document with a generated ID
-                        db.collection("users").document(f_user.toString())
+                        db.collection("users").document(f_user.getUid())
                                 .set(user)
                                 .addOnSuccessListener(aVoid -> {
                                     Log.d(TAG, "DocumentSnapshot successfully written!");
@@ -82,6 +83,9 @@ public class Register extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        FirebaseApp.initializeApp(this);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         mAuth = FirebaseAuth.getInstance();
