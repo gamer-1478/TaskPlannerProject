@@ -63,7 +63,8 @@
                 android:background="@drawable/sign"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                android:hint="@string/password" />
+                android:hint="@string/password"
+                android:inputType="textPassword"/>
 
             <TextView
                 android:id="@+id/login_forgotPassword"

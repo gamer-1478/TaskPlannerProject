@@ -91,7 +91,8 @@
                             android:background="@drawable/sign"
                             android:paddingStart="20dp"
                             android:paddingEnd="20dp"
-                            android:hint="@string/password" />
+                            android:hint="@string/password"
+                            android:inputType="textPassword"/>
 
                         <EditText
                             android:id="@+id/register_confirmPassword"
@@ -102,7 +103,8 @@
                             android:background="@drawable/sign"
                             android:paddingStart="20dp"
                             android:paddingEnd="20dp"
-                            android:hint="@string/confirm_password" />
+                            android:hint="@string/confirm_password"
+                            android:inputType="textPassword"/>
 
                         <Button
                             android:id="@+id/register_submission"
