@@ -1,10 +1,12 @@
-package com.example.taskplannerproject;
+package com.example.taskplannerproject.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.taskplannerproject.R;
 
 public class OnBoarding extends AppCompatActivity {
 

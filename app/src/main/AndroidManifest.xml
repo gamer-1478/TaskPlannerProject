@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.taskplannerproject">
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
+        android:name=".AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".SpalshScreen">
+        <activity android:name=".activity.Register" />
+        <activity android:name=".activity.Login" />
+        <activity android:name=".activity.LoginSignup"/>
+        <activity android:name=".activity.HomeScreen" />
+        <activity android:name=".activity.OnBoarding" />
+        <activity android:name=".activity.AlarmActivity"/>
+        <activity android:name=".activity.SpalshScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginSignup"></activity>
-        <activity android:name=".HomeScreen" />
-        <activity android:name=".Register" />
-        <activity android:name=".Login" />
-        <activity android:name=".OnBoarding" />
+
+
+        <receiver android:name=".broadcastReceiver.AlarmBroadcastReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".broadcastReceiver.AlarmService"
+            android:enabled="true"
+            android:exported="true"/>
 
     </application>
 
